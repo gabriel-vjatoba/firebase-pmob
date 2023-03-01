@@ -12,7 +12,7 @@ const Login = () => {
 
   const enter = () => {
     setIsLoading(true);
-    const email = "flaviomotamedeiros@gmail.com";
+    const email = "teste@email.com";
     const password = "senhateste";
 
     signInWithEmailAndPassword(auth, email, password)
