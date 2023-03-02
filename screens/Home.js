@@ -1,15 +1,12 @@
-import { useNavigation } from "@react-navigation/native";
 import { getAuth } from "firebase/auth";
 import { Button, View, Text } from "react-native";
 
 const Home = () => {
 
   const auth = getAuth();
-  const navigation = useNavigation();
 
   const signOut = () => {
     auth.signOut();
-    navigation.replace("Login");
   }
 
   return (

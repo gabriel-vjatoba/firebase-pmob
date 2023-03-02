@@ -1,12 +1,10 @@
 import { Button, View, Text, ActivityIndicator, Alert } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 
 const Login = () => {
 
   const auth = getAuth();
-  const navigation = useNavigation();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,7 +17,6 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        navigation.replace("Home");
       })
       .catch((error) => {
         Alert.alert('Firebase', 'Erro no login!', [
